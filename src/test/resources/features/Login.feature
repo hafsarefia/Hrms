@@ -7,14 +7,20 @@ Feature: Login
     Then admin user is successfully logged in
 
   @smoke
-  Scenario Outline: valid ess login
+  Scenario: valid ess login
+    When user enter valid ess username and password
+    And user click on login button
+    Then ess user is succesfully logged in
+
+  @smoke
+  Scenario Outline: 
     When user enter valid "<Username>" and "<Password>"
     And user click on login button
     Then "<FirstName>" user is successfully logged in
 
     Examples: 
       | Username | Password    | FirstName |
-      | Mahady   | Mahady123!! | John      |
+      | Admin    | Hum@NHRM123 | Admin     |
       | abd77    | Syntax123!  | Abdullah  |
 
   @smoke
@@ -26,9 +32,9 @@ Feature: Login
   @temp
   Scenario: Login with invlaid credentials
     When I enter invalid username and password and see error message
-      | Username | Password    | ErrorMessage					|
-      | Admin  	 | Admin123		 | Invalid Credentials	|
-      | Hello    | Syntax123!  | Invalid Credentials	|
+      | Username | Password   | ErrorMessage        |
+      | Admin    | Admin123   | Invalid Credentials |
+      | Hello    | Syntax123! | Invalid Credentials |
       #@smoke
   #Scenario: valid admin login
     #Given user is navigated to HRMS

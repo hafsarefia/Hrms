@@ -28,6 +28,8 @@ public class PersonalDetailsPageElements extends BaseClass {
 	@FindBy(id = "personal_txtEmployeeId")
 	public WebElement employeeId;
 
+	@FindBy(id="btnSave")
+	public WebElement save;
 	//verify
 	@FindBy(xpath="//div[@id='profile-pic']/h1")
 	public WebElement verifyEmployee;
