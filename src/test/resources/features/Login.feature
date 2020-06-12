@@ -1,17 +1,7 @@
+@sprint5 @login
 Feature: Login
 
-  @smoke
-  Scenario: valid admin login
-    When user enter valid admin username and password
-    And user click on login button
-    Then admin user is successfully logged in
-
-  @smoke
-  Scenario: valid ess login
-    When user enter valid ess username and password
-    And user click on login button
-    Then ess user is succesfully logged in
-
+  #enhancing test with Scenario Outline to login as admin and ess user
   @smoke
   Scenario Outline: 
     When user enter valid "<Username>" and "<Password>"
@@ -23,35 +13,13 @@ Feature: Login
       | Admin    | Hum@NHRM123 | Admin     |
       | abd77    | Syntax123!  | Abdullah  |
 
-  @smoke
-  Scenario: Login with valid username and invalid password
-    When User enter valid username and invalid password
-    And user click on login button
-    Then User see Invalid Credentials text on login page
-
-  @temp
-  Scenario: Login with invlaid credentials
-    When I enter invalid username and password and see error message
-      | Username | Password   | ErrorMessage        |
-      | Admin    | Admin123   | Invalid Credentials |
-      | Hello    | Syntax123! | Invalid Credentials |
-      #@smoke
-  #Scenario: valid admin login
-    #Given user is navigated to HRMS
-    #When user enter valid admin username and password
-    #And user click on login button
-    #Then admin user is successfully logged in
-#
-  #@smoke
-  #Scenario: valid ess login
-    #Given user is navigated to HRMS
-    #When user enter valid ess username and password
-    #And user click on login button
-    #Then ess user is successfully logged in
-#
-  #@smoke
-  #Scenario: Login with valid username and invalid password
-    #Given user is navigated to HRMS
-    #When User enter valid username and invalid password
-    #And user click on login button
-    #Then User see Invalid Credentials text on login page
+  #@error
+  #Scenario: Error message validation when login with invalid credentials
+    #When I enter invalid username and password and see error message
+    #Then 
+    #Examples: 
+      #| Username | Password   | ErrorMessage        			|
+      #| Admin    | Admin123   | Invalid Credentials 			|
+      #| Hello    | Syntax123! | Invalid Credentials 			|
+      #| Admin    | 				    | Password cannot be empty	|
+      #| 		     | Syntax123! | Username cannot be empty  |

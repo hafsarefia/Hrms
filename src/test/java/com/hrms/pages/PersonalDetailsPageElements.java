@@ -32,7 +32,7 @@ public class PersonalDetailsPageElements extends BaseClass {
 	public WebElement save;
 	//verify
 	@FindBy(xpath="//div[@id='profile-pic']/h1")
-	public WebElement verifyEmployee;
+	public WebElement verifyEmployee;//profilepic
 	
 	@FindBy(id="personal_txtEmpFirstName")
 	public WebElement firstname;

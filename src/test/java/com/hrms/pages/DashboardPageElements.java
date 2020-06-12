@@ -37,7 +37,7 @@ public class DashboardPageElements extends CommonMethods {
 	public WebElement candidates;
 	
 	@FindBy(xpath="//div[@class='menu']/ul/li")
-	public List<WebElement> menubar;
+	public List<WebElement> menubar;//dashmenu
 
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);

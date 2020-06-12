@@ -55,7 +55,7 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	public static void selectCalendarDate(List<WebElement> element, String text) {
-		for (WebElement cell : element) { //cell = pickDate
+		for (WebElement cell : element) { // cell = pickDate
 			if (cell.isEnabled()) {
 				if (cell.getText().equals(text)) {
 					cell.click();
@@ -64,9 +64,9 @@ public class CommonMethods extends PageInitializer {
 			}
 		}
 	}
-	
-	//create calendar
-	
+
+	// create calendar
+
 //	List<WebElement> rows = dayRows;
 //	int rowNums = rows.size();
 //	List<WebElement> cols = dayCols;
@@ -132,9 +132,9 @@ public class CommonMethods extends PageInitializer {
 
 	public static void isDisplayed(WebElement element) {
 
-		boolean isDisplayed = element.isDisplayed();		
+		boolean isDisplayed = element.isDisplayed();
 		String text = element.getText(); // this used for comparing , text represents label/attributes
-		
+
 		if (element.isDisplayed()) {// or i can do element.isDisplayed()
 			System.out.println(text + " is displayed: " + isDisplayed);// +isDisplayed);
 		} else {
@@ -147,7 +147,7 @@ public class CommonMethods extends PageInitializer {
 //	}
 
 	/**
-	 * Methods that accept alerts and catches exception if alert is not present
+	 * Methods that accept alerts and catches excep=tion if alert is not present
 	 */
 	public static void acceptAlert() {
 
@@ -174,7 +174,8 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	/**
-	 * Methods that accgets text of alert and catches exception if alert is not present
+	 * Methods that accgets text of alert and catches exception if alert is not
+	 * present
 	 * 
 	 * @return
 	 */
@@ -245,7 +246,7 @@ public class CommonMethods extends PageInitializer {
 			}
 		}
 	}
-	//kendim
+	// kendim
 //	public static void waitAndClick() {
 //		
 //	}
@@ -264,11 +265,12 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	public static void click(WebElement element) {
-		waitForClickability(element);// burda click yapmadan once we're saying to wait before click jsut to make sure finds the element
+		waitForClickability(element);// burda click yapmadan once we're saying to wait before click jsut to make sure
+										// finds the element
 		element.click();
 	}
-	
-	//kemdim
+
+	// kemdim
 //	public static void waitForClickability(List<WebElement> element) {
 //		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
 //	}
@@ -317,8 +319,6 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 
-	
-	
 //practiced 	
 //	public static void takesSCREENSHOT(String filename) {
 //		File file =  ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -330,9 +330,7 @@ public class CommonMethods extends PageInitializer {
 //			System.out.println("ss cannot be taken");
 //		}
 //	}
-	
-	
-	
+
 	// Created a function for screenshot and wanted to share with you all.
 //	public static void takesScreenshot(String fileName) {
 //		TakesScreenshot ts = (TakesScreenshot) driver;//casting/converting driver to TakesScreenshot 
@@ -363,14 +361,14 @@ public class CommonMethods extends PageInitializer {
 
 		return destinationFile;
 	}
-	
+
 	public static String getTimeStemp() {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
 		return sdf.format(date.getTime());
 	}
-	
-	//another way for tkesscreenshot
+
+	// another way for tkesscreenshot
 //	public static void takesScreenshot(String filename) throws IOException {
 //		//take ss and store it as a file format
 //		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

@@ -45,7 +45,8 @@ Feature: Add new Employee
       | FirstName | MiddleName | LastName |
       | John      | J          | Doe      |
       | Jane      | J          | Smith    |
-  #@excel
-  #Scenario: Adding multiple employees from excel
-    #When user enters employer data from "EmployeeLoginCredentials"
-    #
+  @excel
+  Scenario: Adding multiple employees from excel
+    When user enters employer data from "EmployeeLoginCredentials" excel sheet then employee is added
+    
+    

@@ -15,11 +15,10 @@ import io.cucumber.junit.CucumberOptions;
 						// code if set to true, no actual execution will happen
 		monochrome = true //makes console output more readable
 		,strict = true 
-		,tags = "@maven" 
+		,tags = "@regression" 
 		,plugin = { "pretty", "html:target/cucumber-default-report" 
 				}
 		)
-
-public class TestRunner {
+public class RegressionRunner {
 
 }
