@@ -25,6 +25,7 @@ public class BaseClass {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();//automatically finds the latest version of chrome and uses it 
 			//System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+			//we wont need system.setproperty bc we are using Webdrivermanager library, we can automatically set up our chromedriver
 			driver = new ChromeDriver();// WebDriver driver =
 			break;
 		case "firefox":
@@ -38,7 +39,7 @@ public class BaseClass {
 		//waits until page load for implicit 
 		//driver.manage().window().maximize();//or fullscreen();
 		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);//i wanna set my implicit wait		
-		driver.get(ConfigsReader.getProperty("url"));//intializing our element
+//		driver.get(ConfigsReader.getProperty("url"));//intializing our element
 		
 		//initialize all page objs as part of setup
 		PageInitializer.initialize();//there are diff ways to include our intiliaze 
@@ -46,16 +47,6 @@ public class BaseClass {
 		return driver;
 	}
 
-	
-	
-//	public static void wait(int num) {
-//		try {
-//			Thread.sleep(num*1000);
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-	
 	public static void tearDown() {
 		if (driver != null) {
 			driver.quit();

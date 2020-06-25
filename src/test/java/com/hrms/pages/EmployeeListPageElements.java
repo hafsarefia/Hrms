@@ -1,7 +1,5 @@
 package com.hrms.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,7 +18,7 @@ public class EmployeeListPageElements extends CommonMethods {
 	public WebElement searchBtn;
 	
 	@FindBy(xpath="//table[@id='resultTable']/tbody/tr/td")
-	public List<WebElement> a;
+	public WebElement verify;//List<WebElement>
 	
 	public EmployeeListPageElements() {
 		PageFactory.initElements(driver, this);

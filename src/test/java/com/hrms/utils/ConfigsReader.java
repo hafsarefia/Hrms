@@ -20,7 +20,7 @@ public class ConfigsReader {
 			FileInputStream fis = new FileInputStream(filepath);
 			prop = new Properties();
 			prop.load(fis);
-			fis.close();// if u wanna close ur stream
+			fis.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -30,11 +30,10 @@ public class ConfigsReader {
 
 	/**
 	 * This method will return value of specified key
-	 * 
 	 * @param String key
 	 * @return String value
 	 */
-	// if u wnna retrive other files create another method
+	
 	public static String getProperty(String key) {
 
 		return prop.getProperty(key);

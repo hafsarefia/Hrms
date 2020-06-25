@@ -5,6 +5,7 @@ import com.hrms.pages.DashboardPageElements;
 import com.hrms.pages.EmployeeListPageElements;
 import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonalDetailsPageElements;
+import com.hrms.pages.SauceDemoPageElements;
 
 
 //intializes all pages class and stores references in static variables
@@ -24,6 +25,8 @@ public class PageInitializer extends BaseClass{
 
 	public static EmployeeListPageElements elist;
 	
+	public static SauceDemoPageElements sauce;
+	
 	//these are all local w/out anything(public,privateetc)
 	//to access from diff packages we can make the public sttaic 
 	
@@ -34,5 +37,6 @@ public class PageInitializer extends BaseClass{
 		addEmp = new AddEmployeePageElements();
 		pdetails = new PersonalDetailsPageElements();
 		elist = new EmployeeListPageElements();
+		sauce = new SauceDemoPageElements();
 	}
 }

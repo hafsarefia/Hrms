@@ -58,6 +58,10 @@ public class DashboardPageElements extends CommonMethods {
 		action.moveToElement(pim).perform();
 		click(addEmployee);
 	}
+	public void navigateToEmployeeList() {
+		click(pim);
+		click(employeeList);
+	}
 	
 	//one way
 	public void navigateToCandidates() {

@@ -15,9 +15,11 @@ import io.cucumber.junit.CucumberOptions;
 						// code if set to true, no actual execution will happen
 		monochrome = true //makes console output more readable
 		,strict = true 
-		,tags = "@maven" 
-		,plugin = { "pretty", "html:target/cucumber-default-report" 
-				}
+		//,tags = "@maven" 
+		,plugin = { "pretty", 
+				"html:target/cucumber-default-report",
+				"json:target/cucumber.json"
+		}
 		)
 
 public class TestRunner {
