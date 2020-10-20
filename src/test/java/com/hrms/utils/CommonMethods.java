@@ -1,6 +1,7 @@
 package com.hrms.utils;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -375,6 +376,14 @@ public class CommonMethods extends PageInitializer {
 		return picBytes;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
 	public static String getTimeStemp() {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
@@ -382,12 +391,13 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	// another way for tkesscreenshot
-//	public static void takesScreenshot(String filename) throws IOException {
-//		//take ss and store it as a file format
-//		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//		//now copy the ss to desired location using copyFile method
-//		FileUtils.copyFile(file, new File("/Users/user/eclipse-workspace/TestNG/src"+filename+".png"));
-//	}
+	public static void takesScreenshot(String filename) throws IOException {
+		//take ss and store it as a file format
+		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		//now copy the ss to desired location using copyFile method
+		FileUtils.copyFile(file, new File("/Users/user/eclipse-workspace/TestNG/src"+filename+".png"));
+	}
+	
 //	public static void takesScreenshot(String filepath) {
 //		TakesScreenshot ts=(TakesScreenshot) driver;//downcasting
 //		File sourceFile=ts.getScreenshotAs(OutputType.FILE);
